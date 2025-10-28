@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
 #  lint:
@@ -79,7 +79,7 @@ jobs:
 #    needs: [lint, test, coverage]
     permissions:
       contents: write
-      actions: read    
+      actions: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
